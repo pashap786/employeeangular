@@ -1,0 +1,18 @@
+
+<table border="1">
+    <thead></thead>
+    <tr>
+      <th>id</th>
+      <th>nickname</th>
+      <th>Vacation Days</th>
+      </tr>
+    
+    <tbody>
+        <tr *ngFor="let employee of employees | keyvalue">
+            <td>{{employee.key}}</td>
+            <td>{{employee.value.nickname}}</td>
+            <td>{{employee.value.vacationDaysAccumulated}}</td>
+            <td><button (click)="addWorkDays($event, employee.value)">Add Work</button></td>
+        </tr>
+    </tbody>
+</table>
